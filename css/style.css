@@ -97,18 +97,6 @@ p {
    min-height: 70vh;
 }
 
-@media screen and  (max-width: 635px){
-   .wrapper-bar {
-       display:initial;
-   }
-   .nav-brand {
-       text-align: left;
-   }
-   .nav-menu,.nav-items {
-       flex-direction: column;
-       text-align:center;
-   }
-}
 
 /*   Nav END Section   *  /
 
@@ -117,7 +105,7 @@ p {
 .main-section {
     background-image: url('../assets/Background-image.png');
     background-size: cover;
-    height: 130vh;
+    height: 120vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,13 +168,16 @@ p {
     justify-content: space-around;
     padding:10px;
 }
+.post-head img{
+    width:100%;
+}
 .post-head img:hover {
     transform: scale(1.1);
     transition: transform 1s ease-in-out;
 }
 .carousel-container {
     width:100%;
-    height:150vh;
+    height:100vh;
     background-repeat: no-repeat;
     background-size: 65%;
     background-position: right;
@@ -234,13 +225,13 @@ p {
 }
 
 .blog-details{
-    width: 30%;
+    width: 40%;
     position: absolute;
     bottom: 0px;
     left:35%;
     background-color: lightskyblue;
     border-radius: 30px;
-    padding:0px 10px;
+    padding:0px 5px;
     justify-content: space-evenly;
 }
 .sidebar-container .category{
@@ -279,6 +270,10 @@ p {
   left: 0px;
   bottom: 0px;
   width:70%;
+  border-radius: 0px;
+}
+.latest-post .post-item .post-head img{
+    width:100%;
 }
 .sidebar-container .newsletter{
     height: 30vh;
@@ -292,7 +287,160 @@ p {
   width:50%;
 }
 .sidebar-container .newsletter> form >button{
-    width:60% !important;
+    width:55% !important;
     margin:1rem 0rem !important;
-    
+    border-radius:0px;
+    color:gray;
 }
+
+.sidebar-container .popular-tags{
+    height: 20vh;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 5px;
+}
+
+.sidebar-container .popular-tags span {
+    background: skyblue;
+    color: white;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 15px;
+}
+.pagination-section {
+    width:30vh;
+    margin-left:50vh;
+}
+
+.pagination-section div {
+    background: gray;
+    color:white;
+    border-radius: 50%;
+    padding: 5px 7px;
+}
+.pagination-section div:hover {
+    background-color: skyblue;
+    cursor:pointer;
+}
+
+.footer-section {
+    width:100%;
+    height: 70vh;
+    background-color: black;
+    margin-top:50px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: 80% 20%;
+    align-items: center;
+    grid-gap: 10px;
+    position: relative;
+}
+.footer-section .footer-col{
+    width:90%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-content: space-between;
+    justify-content: center;
+    justify-items: center;
+    margin: auto;
+    grid-gap: 10px;
+
+}
+.footer-section .footer-col .newsletter button {
+    border-radius: 0px;
+    display: inline-block;
+    width:30px;
+    margin:0px;
+    padding:3px;
+}
+.footer-section .footer-col .newsletter input{
+    padding:5px;
+}
+.footer-section .footer-col .instagram .photo-feed img {
+    width:100%;
+}
+.footer-section .footer-col .instagram .photo-feed{
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-template-rows: (2,1fr);
+    grid-gap: 2px;
+}
+.up-arrow {
+    position:fixed;
+    bottom:50px;
+    right:50px;
+    background: skyblue;
+    border-radius: 50%;
+    padding:11px 15px;
+    color: white !important;
+}
+
+@media screen and  (max-width: 635px){
+    .wrapper-bar {
+        display:initial;
+    }
+    .nav-brand {
+        text-align: left;
+    }
+    .nav-menu,.nav-items {
+        flex-direction: column;
+        text-align:center;
+    }
+
+.blog-container {
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr)
+}
+.blog-details{
+    width: 50%;
+    bottom: 0px;
+    left:0px;
+    border-radius: 0px;
+}
+.sidebar-container .category{
+    height: 100vh;
+    justify-items: center;
+}
+.sidebar-container .latest-post{
+    justify-items: center;
+    height:auto;
+}
+.sidebar-container .newsletter{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+}
+.sidebar-container .newsletter> form >input {
+    display: block;
+    padding:10px;
+    width:100%;
+  }
+  .sidebar-container .newsletter> form >button{
+      width:110% !important;
+      margin:1rem 0rem !important;
+      border-radius:0px;
+      color:gray;
+  }
+
+  .pagination-section {
+    width:30vh;
+    margin-left:30vh;
+    margin-top: 5vh;
+}
+.footer-section {
+    height:100vh;
+}
+.footer-section .footer-col{
+    grid-template-columns: repeat(2,1fr);
+}
+.footer-creater{
+    height: 10vh;
+    margin-top: 10px;
+}
+    
+ }
